@@ -57,10 +57,10 @@ function getArticle(id) {
         return response.json();
     }).then(function (data) {
         console.log(data.result)
-        document.getElementById("article-category").innerHTML = data.result[0].category_title;
+        // document.getElementById("article-category").innerHTML = data.result[0].category_title;
         document.getElementById("article-title").innerHTML = data.result[0].title;
         document.getElementById("publish-date").innerHTML = returnShortDate(data.result[0].publishedAt);
-        document.getElementById("article-img").src = `${CDN_URL}${fixImageUrl(data.result[0].mainImage.asset._ref)}`
+        // document.getElementById("article-img").src = `${CDN_URL}${fixImageUrl(data.result[0].mainImage.asset._ref)}`
         document.getElementById("description").innerHTML = toPlainText(data.result[0].body);
     })
     .catch(function (err) {
